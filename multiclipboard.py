@@ -8,10 +8,13 @@ def save_items(filepath, data):
    with open(filepath, "w") as f:
       json.dump(data, f)
       
+# function to read json file
+def load_json(filepath):
+   with open(filepath, "r") as f:
+      data = json.load(f)
+
+      
    
-
-
-
 if len(sys.argv) == 2:
     command = sys.argv[1]
     
