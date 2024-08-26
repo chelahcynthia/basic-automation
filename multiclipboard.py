@@ -14,7 +14,7 @@ def save_data(filepath, data):
 def load_data(filepath):
    try:
       with open(filepath, "r") as f:
-      data = json.load(f)
+       data = json.load(f)
       return data
    except:
       return{}
@@ -30,9 +30,17 @@ if len(sys.argv) == 2:
        key = input("Enter a key: ")
        data[key] = clipboard.paste()
        save_data(SAVED_DATA, data)
+       print("Data saved!")
     elif command == "load":
-       print("load")
+      key = input("Enter a key: ")
+      if key in data:
+          clipboard.copy(data[key])
+          print("Data copieto")
+      else:
+         print("key does not exist")
+      
+       
     elif command == "list":
-        print("Unknown command")
+        print("list")
 else:
     print("Please pass exactly one command")
