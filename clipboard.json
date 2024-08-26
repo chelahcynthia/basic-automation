@@ -1,1 +1,1 @@
-{"python": "with open(filepath, \"r\") as f:\r\n      data = json.load(f)\r\n      return data"}
+{"python": "with open(filepath, \"r\") as f:\r\n      data = json.load(f)\r\n      return data", "python3": "833892\r\n"}
